@@ -1,0 +1,97 @@
+# ==========================================
+# Audio & Media Files (Tất cả file âm thanh & video)
+# ==========================================
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.wma
+*.opus
+*.m4p
+*.aiff
+*.alac
+*.ape
+*.mid
+*.midi
+*.pek
+*.cfa
+
+# Video & Archives
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Audio directories & libraries
+Duplicated_Songs/
+IDK/
+iTunes/
+Playlists/
+
+# ==========================================
+# Lyrics Files & Output Directories (Tất cả file lời bài hát)
+# ==========================================
+lyrics/
+lyrics_new/
+lyrics_backup_whisper/
+lyrics_all_fixed/
+*.lrc
+danh_sach_*.txt
+VET MUA SAMPLE.txt
+completed_songs.txt
+*.log
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ==========================================
+# System & Editor Files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ==========================================
+# Agent & System Generated
+# ==========================================
+.system_generated/

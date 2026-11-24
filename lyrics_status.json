@@ -1,0 +1,12 @@
+{
+  "total_audio": 455,
+  "good_count": 455,
+  "unprocessed_count": 0,
+  "empty_count": 0,
+  "few_lines_count": 1,
+  "corrupted_count": 0,
+  "few_lines": [
+    "scratch_intro.wav"
+  ],
+  "status": "ALL_TRANSCRIBED_AND_READY"
+}

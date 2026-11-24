@@ -1,0 +1,53 @@
+MỞ Powershell by Admin
+## Nếu muốn xóa"[SPOTIFY-DOWNLOADER.COM]" thì: 
+
+
+Get-ChildItem -Filter '*[SPOTIFY-DOWNLOADER.COM]*.mp3' | Rename-Item -NewName { $_.Name -replace '\[SPOTIFY-DOWNLOADER\.COM\]', '' }
+
+\\Get-ChildItem -Filter '*[SPOTIFY-DOWNLOADER.COM]*.mp3': Lấy tất cả file .mp3 có chứa [SPOTIFY-DOWNLOADER.COM] trong tên.
+Rename-Item -NewName { $_.Name -replace '\[SPOTIFY-DOWNLOADER\.COM\]', '' }: Đổi tên mỗi file bằng cách thay thế chuỗi [SPOTIFY-DOWNLOADER.COM] thành rỗng.
+
+## Nếu file đã tồn tại trước khi đổi tên:
+Get-ChildItem -Filter '*[SPOTIFY-DOWNLOADER.COM]*.mp3' |
+    ForEach-Object {
+        $newName = $_.Name -replace '\[SPOTIFY-DOWNLOADER.COM]', ''
+        
+        # Nếu file $newName đã tồn tại, xóa nó trước
+        if (Test-Path $newName) {
+            Remove-Item -LiteralPath $newName
+        }
+        Rename-Item -LiteralPath $_.FullName -NewName $newName
+    }
+
+
+*********
+Do đó, để tìm chuỗi [.COM] chính xác, bạn phải viết nó dưới dạng regex \[\.COM\].
+
+\[: Khớp dấu [ thật.
+\.: Khớp dấu . thật.
+\]: Khớp dấu ] thật.
+
+
+
+
+Get-ChildItem -Filter '*[SPOTDOWNLOADER.COM]*.mp3' | Rename-Item -NewName { $_.Name -replace '.COM', '' }
+
+
+
+Get-ChildItem -Filter '*SPOTDOWNLOADER.COM*.mp3' |
+    ForEach-Object {
+        $newName = $_.Name -replace '[SPOTDOWNLOADER.COM] ', ''
+        
+        # Nếu file $newName đã tồn tại, xóa nó trước
+        if (Test-Path $newName) {
+            Remove-Item -LiteralPath $newName
+        }
+        Rename-Item -LiteralPath $_.FullName -NewName $newName
+    }
+
+
+
+
+### cmd
+powershell -Command "Get-ChildItem -Filter '*[SPOTDOWNLOADER.COM]*.mp3' | Rename-Item -NewName { $_.Name -replace '[SPOTDOWNLOADER.COM]', '' }"
+

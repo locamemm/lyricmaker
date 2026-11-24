@@ -1,0 +1,8 @@
+{
+  "total_audio_files": 455,
+  "aligned_and_corrected_from_web": 334,
+  "preserved_manual_perfection": 8,
+  "kept_whisper_original": 113,
+  "rule_enforced": "100% Original Whisper Timestamps Preserved (AGENTS.md)",
+  "last_updated": "2026-10-24 13:19:21"
+}
